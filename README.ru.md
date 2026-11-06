@@ -44,7 +44,7 @@ updated: 2026-11-06
 | [protocol](specifications/protocol.ru.md) | Что входит в протокол, что обязательно для реализации |
 | [projects](specifications/projects.ru.md) | Проект, wiki и docs, зоны и владельцы |
 | [access](specifications/access.ru.md) | Агенты, идентичность, роли, ограничение путями |
-| [project-manifest](specifications/project-manifest.ru.md) | Файл `.doc-hub.json` в репозитории |
+| [project-manifest](specifications/project-manifest.ru.md) | Файл `.doc-hub.yaml` в репозитории |
 | [hub-storage](specifications/hub-storage.ru.md) | Хранилище хаба и синхронизация между машинами |
 | [wiki](specifications/wiki.ru.md) | Своя документация проекта |
 | [docs-sources](specifications/docs-sources.ru.md) | Внешняя документация, только чтение |
@@ -60,7 +60,7 @@ updated: 2026-11-06
 | Файл | О чём |
 |---|---|
 | [hub-config](schemas/hub-config.ru.md) | `.doc-hub/config.yaml` и `config.local.yaml` |
-| [project-manifest](schemas/project-manifest.ru.md) | `.doc-hub.json` |
+| [project-manifest](schemas/project-manifest.ru.md) | `.doc-hub.yaml` |
 | [discussion](schemas/discussion.ru.md) | Файл обсуждения и метки сообщений |
 | [changes](schemas/changes.ru.md) | Отметка просмотра изменений |
 | [claim](schemas/claim.ru.md) | Отметка работы |
@@ -87,7 +87,7 @@ updated: 2026-11-06
 ### examples/ и templates/
 
 - Примеры: [несколько агентов в одном проекте](examples/single-project-agents.ru.md), [межпроектный контракт](examples/contract-zone.ru.md).
-- Шаблоны: [`.doc-hub.json`](templates/doc-hub.json), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md).
+- Шаблоны: [`.doc-hub.yaml`](templates/doc-hub.yaml), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md).
 
 ## Языки
 

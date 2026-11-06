@@ -29,8 +29,8 @@ updated: 2026-11-06
   Машина 1                                  Машина 2
   ┌──────────────────────────────┐          ┌──────────────────────────────┐
   │ portal/ (репозиторий)        │          │ mobile/ (репозиторий)        │
-  │   docs/                      │          │   .doc-hub.json              │
-  │   .doc-hub.json              │          │                              │
+  │   docs/                      │          │   .doc-hub.yaml              │
+  │   .doc-hub.yaml              │          │                              │
   │ агенты: backend (Claude),    │          │ агент: mobile-dev            │
   │         frontend (Codex)     │          │                              │
   │ хаб/ (клон) ◄ агент/Obsidian │          │ хаб/ (клон) ◄ агент          │

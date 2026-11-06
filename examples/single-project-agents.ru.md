@@ -22,14 +22,14 @@ updated: 2026-11-06
 
 ## Настройка
 
-**Репозиторий портала** — `.doc-hub.json`:
+**Репозиторий портала** — `.doc-hub.yaml`:
 
-```json
-{
-  "hubs": {
-    "main": { "path": "~/projects/hub", "projects": ["portal"], "agent": "ramir-claude-backend" }
-  }
-}
+```yaml
+hubs:
+  main:
+    path: ~/projects/hub
+    projects: [portal]
+    agent: ramir-claude-backend
 ```
 
 **Имя агента** по умолчанию — из манифеста: `ramir-claude-backend` для сессии Claude Code на backend. У Codex другие права, поэтому его имя задано полностью: `DOC_HUB_AGENT=ramir-codex-frontend`. Манифест локальный, на сервере разработки свой. Оба работают в одном репозитории, но в хабе это разные агенты.

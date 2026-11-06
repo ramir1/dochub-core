@@ -30,14 +30,15 @@ projects:
 
 ## Репозиторий мобильного приложения
 
-`.doc-hub.json`:
+`.doc-hub.yaml`:
 
-```json
-{
-  "hubs": {
-    "main": { "path": "~/projects/hub", "projects": [], "agent": "mobile-dev", "access": ["portal"] }
-  }
-}
+```yaml
+hubs:
+  main:
+    path: ~/projects/hub
+    projects: []
+    access: [portal]
+    agent: mobile-dev
 ```
 
 **Доступ к тексту контракта.** Контракт приходит с клоном хаба: `mobile-dev` читает его через реализацию, доступ к коду портала не нужен. В клоне хаба видна вся wiki: ограничение `paths` действует в реализации, см. [wiki](../specifications/wiki.ru.md#видимость).

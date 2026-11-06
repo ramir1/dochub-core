@@ -65,7 +65,7 @@ updated: 2026-11-06
 
 На уровне 2 шаги 1 и 5 обычно выполняет реализация.
 
-1. **Манифест.** Положить в корень `.doc-hub.json` из шаблона [doc-hub.json](../templates/doc-hub.json) и добавить его в `.gitignore` репозитория: файл свой на каждой машине, см. [project-manifest](../specifications/project-manifest.ru.md).
+1. **Манифест.** Положить в корень `.doc-hub.yaml` из шаблона [doc-hub.yaml](../templates/doc-hub.yaml) и добавить его в `.gitignore` репозитория: файл свой на каждой машине, см. [project-manifest](../specifications/project-manifest.ru.md).
 2. **Инструкция.** Добавить в `CLAUDE.md` или `AGENTS.md` текст из шаблона [project-agents-snippet](../templates/project-agents-snippet.ru.md). Без него агент не узнает о хабе.
 3. **Имя агента.** Указать `agent` в разделе хаба манифеста. Другому агенту в этом репозитории задать `DOC_HUB_AGENT_SUFFIX` в окружении инструмента или сессии: регистрировать его в хабе не нужно, см. [access](../specifications/access.ru.md#суффикс).
 4. **Несколько хабов.** Добавить в манифест раздел на каждый хаб; первый раздел используется по умолчанию, см. [project-manifest](../specifications/project-manifest.ru.md#несколько-хабов).
