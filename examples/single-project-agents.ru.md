@@ -27,11 +27,12 @@ updated: 2026-11-06
 ```json
 {
   "hub": { "id": "main", "path": "~/projects/hub" },
-  "projects": ["portal"]
+  "projects": ["portal"],
+  "agent": "ramir-claude-backend"
 }
 ```
 
-**Имя агента** задаётся в окружении каждого инструмента, например `DOC_HUB_AGENT=ramir-claude-backend` для сессии Claude Code на backend и `DOC_HUB_AGENT=ramir-codex-frontend` для Codex. Оба работают в одном репозитории, но в хабе это разные агенты.
+**Имя агента** по умолчанию — из манифеста: `ramir-claude-backend` для сессии Claude Code на backend. У Codex другие права, поэтому его имя задано полностью: `DOC_HUB_AGENT=ramir-codex-frontend`. Манифест локальный, на сервере разработки свой. Оба работают в одном репозитории, но в хабе это разные агенты.
 
 **Хаб** — клон на ноутбуке и на сервере разработки, общий origin. `config.local.yaml` на каждой машине — свой путь к клону портала. Выгрузку `docs/tech` каждая машина обновляет сама; `ramir` читает всё в Obsidian.
 

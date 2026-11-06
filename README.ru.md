@@ -19,7 +19,8 @@ updated: 2026-11-06
 2. [Случаи использования](concepts/use-cases.ru.md) — для чего это нужно на практике.
 3. [Уровни работы](concepts/levels.ru.md) — концепция, протокол, реализации.
 4. [Архитектура](concepts/architecture.ru.md) — из чего состоит DocHub.
-5. [Правила для агентов](rules/agents.ru.md) и [работа через Obsidian](rules/obsidian.ru.md) — как пользоваться хабом сейчас.
+5. [Подключение](rules/integration.ru.md) — как создать хаб и подключить проект.
+6. [Правила для агентов](rules/agents.ru.md) и [работа через Obsidian](rules/obsidian.ru.md) — как пользоваться хабом сейчас.
 
 ## Карта файлов
 
@@ -69,6 +70,7 @@ updated: 2026-11-06
 
 | Файл | О чём |
 |---|---|
+| [integration](rules/integration.ru.md) | Создание хаба и подключение проекта |
 | [agents](rules/agents.ru.md) | Порядок работы ИИ-агента с хабом |
 | [obsidian](rules/obsidian.ru.md) | Настройка и работа через Obsidian |
 | [default-rules](rules/default-rules.ru.md) | Требования к wiki |
