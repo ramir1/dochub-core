@@ -33,7 +33,7 @@ updated: 2026-11-06
 Один хаб обычно обслуживает все проекты. Создаёт его администратор хаба; на уровне 2 эти шаги обычно выполняет реализация:
 
 1. Создать git-репозиторий. Для нескольких машин нужен общий origin, для одной он не обязателен, см. [hub-storage](../specifications/hub-storage.ru.md#синхронизация-между-машинами).
-2. Скопировать шаблоны: [hub-gitignore](../templates/hub-gitignore) → `.gitignore`, [hub-AGENTS](../templates/hub-AGENTS.ru.md) → `AGENTS.md`. Добавить `README.md` с описанием хаба.
+2. Скопировать шаблоны: [hub-gitignore](../templates/hub-gitignore) → `.gitignore`, [hub-AGENTS](../templates/hub-AGENTS.ru.md) → `AGENTS.md`, [hub-obsidian](../templates/hub-obsidian.ru.md) → `OBSIDIAN.ru.md` и его [английскую версию](../templates/hub-obsidian.en.md) → `OBSIDIAN.en.md`. Добавить `README.md` с описанием хаба.
 3. Создать `.doc-hub/config.yaml` с `format_version`, `hub`, `agents` и `projects`, см. [hub-config](../schemas/hub-config.ru.md).
 4. Закоммитить и отправить в origin.
 
