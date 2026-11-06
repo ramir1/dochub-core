@@ -73,12 +73,12 @@ updated: 2026-11-06
 |---|---|
 | `doc-hub discussion list [--status …] [--kind …] [--to <агент>] [--ref <путь>] [--mine]` | все с доступом |
 | `doc-hub discussion show <обсуждение>` | все с доступом |
-| `doc-hub discussion create --kind question\|proposal\|note --title … [--to a,b] [--ref проект:путь] --message <текст\|->` | `participant` |
+| `doc-hub discussion create --kind question\|proposal\|note --title … [--to a,b] [--ref проект:путь] [--slug …] --message <текст\|->` | `participant` |
 | `doc-hub discussion reply <обсуждение> --message <текст\|->` | `participant` |
-| `doc-hub discussion answered <обсуждение> --outcome …` | автор, владелец зоны |
-| `doc-hub discussion accept\|reject <обсуждение> --outcome …` | владелец зоны |
-| `doc-hub discussion apply <обсуждение> --changes путь,… --commit <sha>` | владелец зоны |
-| `doc-hub discussion close <обсуждение> --outcome …` | автор, адресат (`note`), владелец зоны |
+| `doc-hub discussion answered <обсуждение> --outcome … [--message …]` | автор, владелец зоны |
+| `doc-hub discussion accept\|reject <обсуждение> --outcome … [--message …]` | владелец зоны |
+| `doc-hub discussion apply <обсуждение> --changes путь,… --commit <sha> [--outcome …] [--message …]` | владелец зоны |
+| `doc-hub discussion close <обсуждение> --outcome … [--message …]` | автор, адресат (`note`), владелец зоны |
 | `doc-hub discussion search <запрос>` | все с доступом — поиск по итогам и темам |
 | `doc-hub inbox` — обсуждения, где нужна реакция, см. [входящие](features/discussions.ru.md#входящие) | все |
 
@@ -97,7 +97,7 @@ updated: 2026-11-06
 
 | Команда | Что делает |
 |---|---|
-| `doc-hub claim add <пути…> --topic … [--for 4h] [--discussion …]` | Поставить; при пересечении — предупреждение и отказ без `--force` |
+| `doc-hub claim add <пути…> --topic … [--for 4h] [--discussion …] [--slug …]` | Поставить; при пересечении — предупреждение и отказ без `--force` |
 | `doc-hub claim list [--path …]` | Действующие отметки |
 | `doc-hub claim check <пути…>` | Есть ли пересечения |
 | `doc-hub claim extend <отметка> --for 2h` / `claim release <отметка>` | Продлить / снять |
