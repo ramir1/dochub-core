@@ -1,6 +1,10 @@
 {
-  "hub": { "id": "main", "path": "~/projects/hub" },
-  "projects": ["<project-id>"],
-  "agent": "<agent-name>",
-  "access": []
+  "hubs": {
+    "main": {
+      "path": "~/projects/hub",
+      "projects": ["<project-id>"],
+      "agent": "<agent-name>",
+      "access": []
+    }
+  }
 }

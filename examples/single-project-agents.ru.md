@@ -26,9 +26,9 @@ updated: 2026-11-06
 
 ```json
 {
-  "hub": { "id": "main", "path": "~/projects/hub" },
-  "projects": ["portal"],
-  "agent": "ramir-claude-backend"
+  "hubs": {
+    "main": { "path": "~/projects/hub", "projects": ["portal"], "agent": "ramir-claude-backend" }
+  }
 }
 ```
 

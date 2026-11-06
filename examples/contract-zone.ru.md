@@ -34,10 +34,9 @@ projects:
 
 ```json
 {
-  "hub": { "id": "main", "path": "~/projects/hub" },
-  "projects": [],
-  "agent": "mobile-dev",
-  "access": ["portal"]
+  "hubs": {
+    "main": { "path": "~/projects/hub", "projects": [], "agent": "mobile-dev", "access": ["portal"] }
+  }
 }
 ```
 
