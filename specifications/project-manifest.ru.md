@@ -23,7 +23,7 @@ updated: 2026-11-06
 
 ```json
 {
-  "hub": { "id": "main", "path": "~/projects/dochub.ws" },
+  "hub": { "id": "main", "path": "~/projects/hub" },
   "projects": ["portal"]
 }
 ```
@@ -32,7 +32,7 @@ updated: 2026-11-06
 
 ```json
 {
-  "hub": { "id": "main", "path": "~/projects/dochub.ws" },
+  "hub": { "id": "main", "path": "~/projects/hub" },
   "projects": [],
   "access": ["portal"]
 }

@@ -23,6 +23,8 @@ updated: 2026-11-06
 
 ## Карта файлов
 
+[AGENTS](AGENTS.ru.md) — инструкции для агентов, которые редактируют сам Core.
+
 ### concepts/ — понятия
 
 | Файл | О чём |
@@ -30,7 +32,7 @@ updated: 2026-11-06
 | [overview](concepts/overview.ru.md) | Суть, принципы, этапы, открытые вопросы |
 | [use-cases](concepts/use-cases.ru.md) | Несколько агентов в одном проекте; межпроектный контракт; чтение чужой документации |
 | [levels](concepts/levels.ru.md) | Слои, уровни работы, хранение хаба |
-| [architecture](concepts/architecture.ru.md) | Репозитории, хаб, приложения, агенты, синхронизация |
+| [architecture](concepts/architecture.ru.md) | Репозитории, хаб, реализации, агенты, синхронизация |
 | [features](concepts/features.ru.md) | Функции хаба: обсуждения, изменения, отметки работы |
 | [glossary](concepts/glossary.ru.md) | Термины |
 

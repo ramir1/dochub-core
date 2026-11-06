@@ -54,7 +54,3 @@ overview.en.md    # английская версия
 | Отметка работы | `claims/<агент>-<slug>.md` |
 
 `slug` — тема латиницей в kebab-case, 2–5 слов. Подробно — [schemas/](../schemas/).
-
-## Существующие нарушения
-
-В текущем workspace `dochub.ws` есть файлы, не соответствующие правилам (`projects/dochub/README.md.md`, `discussions/ideas/Общая идея.md`). Переименование — отдельная задача, не выполнена.

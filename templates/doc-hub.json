@@ -1,5 +1,5 @@
 {
-  "hub": { "id": "main", "path": "~/projects/dochub.ws" },
+  "hub": { "id": "main", "path": "~/projects/hub" },
   "projects": ["<project-id>"],
   "access": []
 }

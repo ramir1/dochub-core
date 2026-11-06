@@ -8,7 +8,7 @@ status: open
 author: <agent-name>
 to: []
 refs:
-  - <project-id>:docs/<file>.md
+  - <project-id>:wiki/<file>.md
 created: {{date:YYYY-MM-DD}}T{{time:HH:mm}}:00Z
 outcome:
 ---

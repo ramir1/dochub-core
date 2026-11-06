@@ -26,7 +26,7 @@ updated: 2026-11-06
 
 ```json
 {
-  "hub": { "id": "main", "path": "~/projects/dochub.ws" },
+  "hub": { "id": "main", "path": "~/projects/hub" },
   "projects": ["portal"]
 }
 ```
@@ -37,7 +37,7 @@ updated: 2026-11-06
 
 ## Сценарий
 
-1. **Backend меняет формат ошибок.** `ramir-claude-backend` проверяет отметки работы на `wiki/api/errors.md` (пусто), ставит свою, меняет API в репозитории и документ через `doc-hub wiki write`.
+1. **Backend меняет формат ошибок.** `ramir-claude-backend` проверяет отметки работы на `wiki/api/errors.md` (пусто), ставит свою, меняет API в репозитории и документ в wiki.
 2. **Уведомление.** Создаёт обсуждение `note` «Новый формат ошибок API» с `to: [ramir-codex-frontend]` и `refs: [portal:wiki/api/errors.md]`. Снимает отметку работы. Пушит хаб. Файлы — как в примере [schemas/discussion](../schemas/discussion.ru.md#пример).
 3. **Frontend узнаёт.** Новая сессия Codex начинается с проверки входящих: видит `note`, читает `wiki/api/errors.md`, обновляет клиент, закрывает обсуждение с итогом.
 4. **Тесты на другой машине.** `ramir-claude-tests` начинает сессию на сервере: `git pull` хаба, проверка изменений — видит изменение `wiki/api/errors.md`; по `refs` находит обсуждение и итог, понимает, почему изменилось, и обновляет тесты.
@@ -45,4 +45,4 @@ updated: 2026-11-06
 
 ## Вопрос другой зоне
 
-`ramir-claude-tests` считает, что в `wiki/ui/forms.md` описано не то поведение. Это зона `ramir-codex-frontend`, поэтому тесты не правят документ, а создают `proposal` с `refs: [portal:wiki/ui/forms.md]`. Владелец зоны принимает, правит документ в wiki и отмечает `applied` с коммитом.
+`ramir-claude-tests` считает, что в `wiki/ui/forms.md` описано не то поведение. Это зона `ramir-codex-frontend`, поэтому тесты не правят документ, а создают `proposal` с `refs: [portal:wiki/ui/forms.md]`. Владелец зоны принимает, правит документ в wiki и отмечает `applied` с коммитом хаба.

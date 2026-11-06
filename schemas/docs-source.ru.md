@@ -9,7 +9,7 @@ updated: 2026-11-06
 
 Спецификация — [docs-sources](../specifications/docs-sources.ru.md).
 
-Файл `projects/<id>/docs/<папка>/.source.yaml`. Пишется при `doc-hub docs sync`, в git хаба не попадает.
+Файл `projects/<id>/docs/<папка>/.source.yaml`. Пишется при выгрузке, в git хаба не попадает.
 
 | Поле | Тип | Обяз. | Описание |
 |---|---|:-:|---|
@@ -17,7 +17,7 @@ updated: 2026-11-06
 | `folder` | строка | да | Имя папки источника |
 | `repository` | строка | да | Адрес репозитория |
 | `branch` | строка | да | Ветка источника |
-| `ref` | строка | да | Ссылка, с которой сделана выгрузка: ветка или значение `--ref` |
+| `ref` | строка | да | Ссылка, с которой сделана выгрузка: ветка или явно указанная ссылка |
 | `commit` | строка | да | Коммит выгрузки (полный SHA) |
 | `path` | строка | да | Что подключено из репозитория |
 | `paths` | массив строк | да | Выгруженные виртуальные пути; уже всей папки, если выгружал агент с ограничением |
@@ -27,9 +27,9 @@ updated: 2026-11-06
 ```yaml
 project: portal
 folder: tech
-repository: git@example.com:portal.git
-branch: master
-ref: master
+repository: git@github.com:example/portal.git
+branch: main
+ref: main
 commit: 4f2a9c1d8e7b6a5f4e3d2c1b0a9f8e7d6c5b4a39
 path: docs
 paths: [docs/tech]
