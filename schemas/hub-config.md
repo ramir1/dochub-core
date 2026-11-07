@@ -26,6 +26,7 @@ updated: 2026-11-07
 | `projects.<id>.name` | string | yes | Name |
 | `projects.<id>.docs.<folder>` | map | no | Connected external documentation, key: the folder `projects/<id>/docs/<folder>/` |
 | `projects.<id>.docs.<folder>.repository` | string | no | Git repository URL; without it the source is a local folder |
+| `projects.<id>.docs.<folder>.upload` | boolean | no | `true`: the source is an uploaded archive, see [docs-sources](../specifications/docs-sources.md) |
 | `projects.<id>.docs.<folder>.branch` | string | no | Branch, `main` by default |
 | `projects.<id>.docs.<folder>.path` | string | no | What to connect, from the project root or clone; without it, the whole root |
 | `projects.<id>.owners` | array of strings | yes | Default owners |

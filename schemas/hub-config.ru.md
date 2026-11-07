@@ -24,6 +24,7 @@ updated: 2026-11-06
 | `projects.<id>.name` | строка | да | Название |
 | `projects.<id>.docs.<папка>` | словарь | нет | Подключённая внешняя документация, ключ — папка `projects/<id>/docs/<папка>/` |
 | `projects.<id>.docs.<папка>.repository` | строка | нет | URL git-репозитория; без него источник — локальная папка |
+| `projects.<id>.docs.<папка>.upload` | логическое | нет | `true` — источник загружен архивом, см. [docs-sources](../specifications/docs-sources.ru.md) |
 | `projects.<id>.docs.<папка>.branch` | строка | нет | Ветка, по умолчанию `main` |
 | `projects.<id>.docs.<папка>.path` | строка | нет | Что подключить, от корня проекта или клона; без него — весь корень |
 | `projects.<id>.owners` | массив строк | да | Владельцы по умолчанию |

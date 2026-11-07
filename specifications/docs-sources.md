@@ -39,6 +39,8 @@ projects:
 
 The contents of `path` go straight into the folder: `docs/tech/` gets the files from `path`. There can be several sources. The root on this machine is `projects.<id>.docs.<folder>.local_path` in `config.local.yaml`: the project root for a local folder, the clone for a repository. `path` is given from this root, so it is the same on all machines.
 
+**Archive.** A level 3 implementation may accept documentation as an uploaded archive: `docs.<folder>: {upload: true}`. There is no source outside the hub, and the files exist only in the export. It is updated by a new upload, and the export command skips such a source. The hub is not responsible for storing these files: they do not get into git or the backup.
+
 ## Properties
 
 - **Read-only.** An export is not edited: an edit is lost on the next export. Edit in the source.

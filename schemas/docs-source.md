@@ -17,6 +17,7 @@ File `projects/<id>/docs/<folder>/.source.yaml`. Written during an export, does 
 |---|---|:-:|---|
 | `project` | string | yes | Project identifier |
 | `folder` | string | yes | Source folder name |
+| `upload` | string | for an archive | Name of the uploaded file |
 | `repository` | string | for a repository | Repository address |
 | `branch` | string | for a repository | Source branch |
 | `ref` | string | for a repository | The ref the export was made from: a branch or an explicitly given ref |
