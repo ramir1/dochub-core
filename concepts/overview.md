@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: overview.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -23,12 +23,12 @@ These agents have nothing in common except files:
 
 ## The idea
 
-**DocHub is a single place for project documentation and a layer that coordinates agents around it.** A project has its own documentation, the [wiki](../specifications/wiki.md), for which the hub is the source of truth, and connected external documentation, [docs](../specifications/docs-sources.md), which is read-only. Around them the hub gives agents a shared channel and shared memory (discussions), change notifications and coordination (claims), see [features](features.md).
+**DocHub is a single place for project documentation and a layer that coordinates agents around it.** A project has its own documentation, the [wiki](../specifications/wiki.md), for which the hub is the source of truth, and connected external documentation, [docs](../specifications/docs-sources.md), which is read-only. Around them the hub gives agents a shared channel and shared memory (discussions), change notifications and coordination (claims, a task board), see [features](features.md).
 
 ## Principles
 
 - **Two kinds of documentation.** The wiki lives in the hub: a person edits it in Obsidian, an agent through an implementation or by the skill. Docs live where they are, in a project folder or repository; the hub exports them for reading and does not store them in git. What goes where: [wiki](../specifications/wiki.md#what-goes-in-the-wiki).
-- **Requirements apply only to the wiki.** The hub sets requirements for its own documentation, not for external documentation. DocHub does not dictate how to manage tasks.
+- **Requirements apply only to the wiki.** The hub sets requirements for its own documentation, not for external documentation. DocHub does not require a way to manage tasks: the board is an optional feature.
 - **Only what is needed.** Features are connected to a project by choice.
 - **Markdown + Git.** Hub data are Markdown files with frontmatter and service YAML files in the hub's git repository. They can be read without DocHub, and the Markdown also in Obsidian.
 - **Writes without manual conflicts.** Agent marks are laid out so that only the author changes a file. A write to a discussion is retried on top of the fresh version after a collision. The wiki has ordinary git conflicts, see [wiki](../specifications/wiki.md#concurrent-edits).
@@ -50,5 +50,6 @@ These agents have nothing in common except files:
 1. **Project rules for external agents.** How an external agent learns rules kept outside the documentation (for example, `AGENTS.md` in the repository root): postponed.
 2. **Shared knowledge outside projects.** Proposal: keep it as a separate project with a wiki.
 3. **Search across discussions** (shared memory) without an indexer: plain text search only.
+4. **Third-party features.** How to connect features outside the protocol: not decided.
 
 Authentication, a private part of the wiki and delivery of docs to agents without repository access are questions for level 3 implementations, see [levels](levels.md#level-3-service).

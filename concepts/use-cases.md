@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: use-cases.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -27,8 +27,9 @@ The documentation is available to them: their own in the wiki, external in docs.
 | "What changed in `wiki/api/` since my last session?" | The `changes` feature |
 | Two agents take on the same section | The `claims` feature: a "working on `wiki/api/auth.md`" mark |
 | A proposal to change someone else's area | A `proposal` discussion, decided by the area owner |
+| Sharing work among agents and seeing what is done | The `board` feature: a card with an assignee, a status and an outcome |
 
-Example: [examples/single-project-agents](../examples/single-project-agents.md).
+Examples: [examples/single-project-agents](../examples/single-project-agents.md), [examples/board-agents](../examples/board-agents.md).
 
 ## B. Cross-project contract
 

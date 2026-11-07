@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Протокол DocHub
@@ -20,7 +20,7 @@ updated: 2026-11-06
 | Внешняя документация | [docs-sources](docs-sources.ru.md) |
 | Документы и ссылки | [documents](documents.ru.md) |
 | Манифест репозитория | [project-manifest](project-manifest.ru.md) |
-| Функции | [discussions](features/discussions.ru.md), [changes](features/changes.ru.md), [claims](features/claims.ru.md) |
+| Функции | [discussions](features/discussions.ru.md), [changes](features/changes.ru.md), [claims](features/claims.ru.md), [board](features/board.ru.md) |
 | Версия формата | [versioning](versioning.ru.md) |
 | Форматы файлов | [schemas/](../schemas/) |
 
@@ -55,4 +55,5 @@ updated: 2026-11-06
 - **конфигурацию:** `format_version`, описаны ли агенты из владельцев и участников, допустимы ли роли, являются ли владельцы `participant` проекта;
 - **обсуждения:** имя файла, обязательные поля, `uid`, статус для вида, `outcome` при статусе не `open`, `changes` и `commit` при `applied`, адресат у `note`, время UTC, метки и разделители сообщений, непустые сообщения;
 - **отметки работы и просмотра:** обязательные поля, связь имени файла с агентом, время UTC;
+- **карточки:** обязательные поля, статус, приоритет, `assignee` при `doing`, `outcome` при `done` и `closed`, совпадение `status` с последней меткой истории, время UTC;
 - **wiki:** относительные ссылки ведут на существующие файлы.

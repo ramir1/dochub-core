@@ -34,11 +34,13 @@ The hub is a git repository with configuration, project wikis and feature data. 
         │   └── <YYYY-MM-DD-slug>.md
         ├── changes/
         │   └── <agent>.yaml          # view mark
-        └── claims/
-            └── <agent>-<slug>.md     # claim
+        ├── claims/
+        │   └── <agent>-<slug>.md     # claim
+        └── board/
+            └── <slug>.md             # card
 ```
 
-File schemas: [discussion](../schemas/discussion.md), [changes](../schemas/changes.md), [claim](../schemas/claim.md), [docs-source](../schemas/docs-source.md).
+File schemas: [discussion](../schemas/discussion.md), [changes](../schemas/changes.md), [claim](../schemas/claim.md), [card](../schemas/card.md), [docs-source](../schemas/docs-source.md).
 
 ## Who changes which file
 
@@ -49,11 +51,12 @@ Write permissions: [access](access.md#write-policy). By file:
 | `discussions/<slug>.md` | members append messages; the status changes by the feature's rules |
 | `changes/<agent>.yaml` | the agent itself |
 | `claims/<agent>-<slug>.md` | the agent itself; any member may delete an expired claim |
+| `board/<slug>.md` | participants, by the feature rules |
 | `.doc-hub/config.yaml` | the hub administrator |
 | `wiki/…` | the area owner |
 | `docs/<folder>/…` | only the export operation; not in git |
 
-Marks are laid out in their authors' files and do not conflict on merge. Discussions and the wiki can collide, see [write collisions](#write-collisions).
+Marks are laid out in their authors' files and do not conflict on merge. Discussions, cards and the wiki can collide, see [write collisions](#write-collisions).
 
 ## Synchronization between machines
 
@@ -74,6 +77,7 @@ People in Obsidian use the Git plugin (automatic pull/push).
 If `rebase` ends in a conflict: abort it, undo your commit, update the hub.
 
 - **Discussion:** append the message again on top of the fresh version. Before changing a status, check again that the transition is valid.
+- **Card:** re-read it, check again that the transition is valid, and repeat the write.
 - **Wiki:** refuse the write and report the conflict so that the author rereads the document.
 
 Other people's changes are not overwritten. A person in Obsidian resolves a conflict manually.

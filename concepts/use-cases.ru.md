@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Случаи использования
@@ -25,8 +25,9 @@ updated: 2026-11-06
 | «Что поменялось в `wiki/api/` с моей прошлой сессии?» | Функция `changes` |
 | Два агента берутся за один раздел | Функция `claims`: отметка «работаю над `wiki/api/auth.md`» |
 | Предложение изменить чужую зону | Обсуждение `proposal`, решает владелец зоны |
+| Распределить работу между агентами и видеть, что сделано | Функция `board`: карточка с исполнителем, статусом и итогом |
 
-Пример — [examples/single-project-agents](../examples/single-project-agents.ru.md).
+Примеры — [examples/single-project-agents](../examples/single-project-agents.ru.md), [examples/board-agents](../examples/board-agents.ru.md).
 
 ## B. Межпроектный контракт
 

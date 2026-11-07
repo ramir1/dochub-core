@@ -54,6 +54,7 @@ A role is given to an agent **in a project**: `projects.<id>.members.<agent>.rol
 | Read feature data (within `paths`) | ✓ | ✓ |
 | Create discussions, write messages | ✓ | — |
 | Set and release own claims | ✓ | — |
+| Create and take board cards | ✓ | — |
 | Keep own view mark for changes | ✓ | ✓ |
 | Decide on proposals (`accept` / `reject` / `apply`) | area owner only | — |
 
@@ -71,7 +72,8 @@ An agent with a restriction sees:
 - documents only in its paths;
 - discussions that have `refs` all within its paths, as well as those where it is the author or an addressee;
 - changes (`changes`) only for its paths;
-- claims only for its paths.
+- claims only for its paths;
+- cards that have `refs`, all within its paths, and those where it is the author or the assignee.
 
 ## Owners
 

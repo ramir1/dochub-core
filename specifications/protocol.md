@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: protocol.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -22,7 +22,7 @@ The protocol is what everyone who reads and writes hub data must follow: an agen
 | External documentation | [docs-sources](docs-sources.md) |
 | Documents and links | [documents](documents.md) |
 | Repository manifest | [project-manifest](project-manifest.md) |
-| Features | [discussions](features/discussions.md), [changes](features/changes.md), [claims](features/claims.md) |
+| Features | [discussions](features/discussions.md), [changes](features/changes.md), [claims](features/claims.md), [board](features/board.md) |
 | Format version | [versioning](versioning.md) |
 | File formats | [schemas/](../schemas/) |
 
@@ -57,4 +57,5 @@ Data validation checks:
 - **configuration:** `format_version`, whether agents from owners and members are described, whether roles are valid, whether owners are `participant` of the project;
 - **discussions:** file name, required fields, `uid`, status for the kind, `outcome` when the status is not `open`, `changes` and `commit` when `applied`, an addressee for `note`, UTC time, message marks and separators, non-empty messages;
 - **claims and view marks:** required fields, the link between file name and agent, UTC time;
+- **cards:** required fields, status, priority, `assignee` for `doing`, `outcome` for `done` and `closed`, `status` matching the last history mark, UTC time;
 - **wiki:** relative links lead to existing files.

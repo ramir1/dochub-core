@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: cli-contract.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -104,9 +104,23 @@ An agent runs in its own project's repository, not in the hub.
 | `doc-hub claim check <paths…>` | Whether there are overlaps |
 | `doc-hub claim extend <claim> --for 2h` / `claim release <claim>` | Extend / release |
 
+## Board
+
+| Command | Who |
+|---|---|
+| `doc-hub card list [--status …] [--assignee <agent>] [--ref <path>] [--mine]` | everyone with access |
+| `doc-hub card show <card>` | everyone with access |
+| `doc-hub card add --title … [--status backlog\|todo] [--assignee …] [--priority low\|normal\|high] [--due YYYY-MM-DD] [--ref project:path] [--discussion …] [--slug …] [--message <text\|->]` | `participant` |
+| `doc-hub card edit <card> [--title …] [--assignee …] [--priority …] [--due …] [--ref …] [--discussion …] [--message <text\|->]` | author, assignee, project owner |
+| `doc-hub card take <card>` | see [statuses](features/board.md#statuses) |
+| `doc-hub card move <card> todo\|doing\|done\|closed [--outcome …]` | see [statuses](features/board.md#statuses) |
+| `doc-hub card close <card> --outcome …` | author, project owner |
+
+`<card>` is a file name without the extension or a `uid`. `--message` sets the card description. An empty value in `card edit` clears the field.
+
 ## Session start summary
 
-`doc-hub status` is one command for an agent at session start: who I am, the inbox (`inbox`), changes since the last view, active claims for the project, docs export lag.
+`doc-hub status` is one command for an agent at session start: who I am, the inbox (`inbox`), changes since the last view, active claims for the project, own unfinished cards, docs export lag.
 
 ## Default values
 

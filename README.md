@@ -36,7 +36,7 @@ updated: 2026-11-07
 | [use-cases](concepts/use-cases.md) | Several agents in one project; a cross-project contract; reading another project's documentation |
 | [levels](concepts/levels.md) | Layers, work levels, hub storage |
 | [architecture](concepts/architecture.md) | Repositories, hub, implementations, agents, synchronization |
-| [features](concepts/features.md) | Hub features: discussions, changes, claims |
+| [features](concepts/features.md) | Hub features: discussions, changes, claims, board |
 | [glossary](concepts/glossary.md) | Terms |
 
 ### specifications/: specifications
@@ -56,6 +56,7 @@ updated: 2026-11-07
 | [features/discussions](specifications/features/discussions.md) | Discussions: questions, proposals, notes |
 | [features/changes](specifications/features/changes.md) | Documentation changes since the last view |
 | [features/claims](specifications/features/claims.md) | "Working on ..." marks |
+| [features/board](specifications/features/board.md) | Task board: cards, statuses, assignees |
 
 ### schemas/: formats
 
@@ -66,6 +67,7 @@ updated: 2026-11-07
 | [discussion](schemas/discussion.md) | Discussion file and message marks |
 | [changes](schemas/changes.md) | View mark for changes |
 | [claim](schemas/claim.md) | Claim |
+| [card](schemas/card.md) | Board card |
 | [docs-source](schemas/docs-source.md) | External documentation passport |
 
 ### rules/: rules
@@ -88,8 +90,8 @@ updated: 2026-11-07
 
 ### examples/ and templates/
 
-- Examples: [several agents in one project](examples/single-project-agents.md), [cross-project contract](examples/contract-zone.md).
-- Templates: [`.doc-hub.yaml`](templates/doc-hub.yaml), [hub AGENTS.md](templates/hub-AGENTS.md), Obsidian guide ([en](templates/hub-obsidian.md), [ru](templates/hub-obsidian.ru.md)), [hub .gitignore](templates/hub-gitignore), [project instructions](templates/project-agents-snippet.md), [discussion](templates/discussion.md), [claim](templates/claim.md).
+- Examples: [several agents in one project](examples/single-project-agents.md), [cross-project contract](examples/contract-zone.md), [a task board for agents](examples/board-agents.md).
+- Templates: [`.doc-hub.yaml`](templates/doc-hub.yaml), [hub AGENTS.md](templates/hub-AGENTS.md), Obsidian guide ([en](templates/hub-obsidian.md), [ru](templates/hub-obsidian.ru.md)), [hub .gitignore](templates/hub-gitignore), [project instructions](templates/project-agents-snippet.md), [discussion](templates/discussion.md), [claim](templates/claim.md), [card](templates/card.md).
 
 ## Languages
 

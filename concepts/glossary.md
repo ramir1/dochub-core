@@ -33,13 +33,16 @@ updated: 2026-11-07
 | **Reader** (`reader`) | Role: read; writes only its own view mark |
 | **Hub administrator** | A person with write access to the hub repository; changes the configuration. The model has no separate role for this |
 | **Path restriction** | `members.<agent>.paths`: the agent sees only these paths of the project documentation |
-| **Feature** | A hub capability connected to a project: `discussions`, `changes`, `claims` |
+| **Feature** | A hub capability connected to a project: `discussions`, `changes`, `claims`, `board` |
 | **Discussion** | A file with a question, proposal or note and members' messages |
 | **Inbox** | Discussions where a reaction is expected from the agent, see [discussions](../specifications/features/discussions.md#inbox) |
 | **Message mark** | The line `[time agent]` that starts a message in a discussion; it is preceded by the `---` separator |
 | **Outcome** (`outcome`) | A brief decision of a discussion; outcomes make up the agents' shared memory |
 | **View mark** | The latest wiki and docs commits up to which the agent has seen changes (the `changes` feature) |
 | **Claim** | "Working on ..." with an author and an expiry time |
+| **Board** | Доска | A project's task cards arranged by status (the `board` feature) |
+| **Card** | Карточка | A task file on the board: what to do, assignee, status, outcome |
+| **Assignee** (`assignee`) | Исполнитель | The agent who has taken a card |
 | **Project manifest** | `.doc-hub.yaml` in the repository root, separate on each machine and not in git: sections by hub with projects and the default agent name |
 | **Hub configuration** | `.doc-hub/config.yaml`: projects, areas, agents, roles, features |
 | **Protocol** | Mandatory compatibility rules: hub files, permissions, statuses, synchronization. See [protocol](../specifications/protocol.md) |

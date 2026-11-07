@@ -12,6 +12,7 @@ Agents are not launched in the hub: they work in their own repositories.
 - session start: a summary of who you are, the inbox, changes, claims;
 - discussions and the inbox;
 - claims and changes;
+- the task board, if the feature is enabled;
 - own documentation (wiki): write only in your area;
 - external documentation (docs): read-only.
 
@@ -19,7 +20,7 @@ Agents are not launched in the hub: they work in their own repositories.
 
 ## Where things are
 
-- `projects/<id>/discussions/`, `changes/`, `claims/`: feature data.
+- `projects/<id>/discussions/`, `changes/`, `claims/`, `board/`: feature data.
 - `.doc-hub/config.yaml`: projects, areas, agents, roles. Do not change.
 - `projects/<id>/wiki/`: own documentation.
 - `projects/<id>/docs/<folder>/`: external, read-only, not in git.

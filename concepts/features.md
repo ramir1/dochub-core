@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: features.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -26,5 +26,6 @@ A **feature** is a hub capability that can be connected to a project. Without fe
 | Discussions | `discussions` | Channel and shared memory: questions, proposals, notes, outcomes | [discussions](../specifications/features/discussions.md) |
 | Changes | `changes` | What changed in the documentation since the agent's last view | [changes](../specifications/features/changes.md) |
 | Claims | `claims` | Who is working on what right now | [claims](../specifications/features/claims.md) |
+| Board | `board` | Project tasks: what to do and who has taken it. Optional, enabled by choice | [board](../specifications/features/board.md) |
 
 New features are added when a real use case appears.

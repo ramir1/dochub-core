@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Схема конфигурации хаба
@@ -33,7 +33,7 @@ updated: 2026-11-06
 | `projects.<id>.members` | словарь | да | Ключ — имя агента |
 | `projects.<id>.members.<агент>.role` | `participant` \| `reader` | да | Роль |
 | `projects.<id>.members.<агент>.paths` | массив строк | нет | Ограничение доступа путями |
-| `projects.<id>.features.<ключ>.enabled` | логическое | да | `discussions`, `changes`, `claims` |
+| `projects.<id>.features.<ключ>.enabled` | логическое | да | `discussions`, `changes`, `claims`, `board` |
 
 Идентификаторы и имена: `^[a-z0-9][a-z0-9-]*$`. Пути — без ведущего и завершающего `/`. Владельцы должны быть `participant` проекта.
 
@@ -85,6 +85,7 @@ projects:
       discussions: { enabled: true }
       changes:     { enabled: true }
       claims:      { enabled: true }
+      board:       { enabled: true }
 ```
 
 Адрес репозитория в примере условный.

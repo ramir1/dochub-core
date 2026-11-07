@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Интерфейс эталонной реализации `doc-hub`
@@ -102,9 +102,23 @@ updated: 2026-11-06
 | `doc-hub claim check <пути…>` | Есть ли пересечения |
 | `doc-hub claim extend <отметка> --for 2h` / `claim release <отметка>` | Продлить / снять |
 
+## Доска
+
+| Команда | Кто |
+|---|---|
+| `doc-hub card list [--status …] [--assignee <агент>] [--ref <путь>] [--mine]` | все с доступом |
+| `doc-hub card show <карточка>` | все с доступом |
+| `doc-hub card add --title … [--status backlog\|todo] [--assignee …] [--priority low\|normal\|high] [--due YYYY-MM-DD] [--ref проект:путь] [--discussion …] [--slug …] [--message <текст\|->]` | `participant` |
+| `doc-hub card edit <карточка> [--title …] [--assignee …] [--priority …] [--due …] [--ref …] [--discussion …] [--message <текст\|->]` | автор, исполнитель, владелец проекта |
+| `doc-hub card take <карточка>` | см. [статусы](features/board.ru.md#статусы) |
+| `doc-hub card move <карточка> todo\|doing\|done\|closed [--outcome …]` | см. [статусы](features/board.ru.md#статусы) |
+| `doc-hub card close <карточка> --outcome …` | автор, владелец проекта |
+
+`<карточка>` — имя файла без расширения или `uid`. `--message` задаёт описание карточки. Пустое значение в `card edit` очищает поле.
+
 ## Сводка для начала сессии
 
-`doc-hub status` — одна команда для агента в начале сессии: кто я, входящие (`inbox`), изменения с последнего просмотра, действующие отметки по проекту, отставание выгрузок docs.
+`doc-hub status` — одна команда для агента в начале сессии: кто я, входящие (`inbox`), изменения с последнего просмотра, действующие отметки по проекту, свои незавершённые карточки, отставание выгрузок docs.
 
 ## Значения по умолчанию
 

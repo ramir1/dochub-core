@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Функции хаба
@@ -24,5 +24,6 @@ updated: 2026-11-06
 | Обсуждения | `discussions` | Канал и общая память: вопросы, предложения, уведомления, итоги | [discussions](../specifications/features/discussions.ru.md) |
 | Изменения | `changes` | Что изменилось в документации с последнего просмотра агента | [changes](../specifications/features/changes.ru.md) |
 | Отметки работы | `claims` | Кто над чем сейчас работает | [claims](../specifications/features/claims.ru.md) |
+| Доска | `board` | Задачи проекта: что сделать и кто взялся. Необязательна, включается по выбору | [board](../specifications/features/board.ru.md) |
 
 Новые функции добавляются, когда появляется реальный случай использования.

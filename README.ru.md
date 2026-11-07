@@ -34,7 +34,7 @@ updated: 2026-11-07
 | [use-cases](concepts/use-cases.ru.md) | Несколько агентов в одном проекте; межпроектный контракт; чтение чужой документации |
 | [levels](concepts/levels.ru.md) | Слои, уровни работы, хранение хаба |
 | [architecture](concepts/architecture.ru.md) | Репозитории, хаб, реализации, агенты, синхронизация |
-| [features](concepts/features.ru.md) | Функции хаба: обсуждения, изменения, отметки работы |
+| [features](concepts/features.ru.md) | Функции хаба: обсуждения, изменения, отметки работы, доска |
 | [glossary](concepts/glossary.ru.md) | Термины |
 
 ### specifications/ — спецификации
@@ -54,6 +54,7 @@ updated: 2026-11-07
 | [features/discussions](specifications/features/discussions.ru.md) | Обсуждения: вопросы, предложения, уведомления |
 | [features/changes](specifications/features/changes.ru.md) | Изменения документации с последнего просмотра |
 | [features/claims](specifications/features/claims.ru.md) | Отметки «работаю над …» |
+| [features/board](specifications/features/board.ru.md) | Доска задач: карточки, статусы, исполнители |
 
 ### schemas/ — форматы
 
@@ -64,6 +65,7 @@ updated: 2026-11-07
 | [discussion](schemas/discussion.ru.md) | Файл обсуждения и метки сообщений |
 | [changes](schemas/changes.ru.md) | Отметка просмотра изменений |
 | [claim](schemas/claim.ru.md) | Отметка работы |
+| [card](schemas/card.ru.md) | Карточка доски |
 | [docs-source](schemas/docs-source.ru.md) | Паспорт внешней документации |
 
 ### rules/ — правила
@@ -86,8 +88,8 @@ updated: 2026-11-07
 
 ### examples/ и templates/
 
-- Примеры: [несколько агентов в одном проекте](examples/single-project-agents.ru.md), [межпроектный контракт](examples/contract-zone.ru.md).
-- Шаблоны: [`.doc-hub.yaml`](templates/doc-hub.ru.yaml), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), памятка Obsidian ([ru](templates/hub-obsidian.ru.md), [en](templates/hub-obsidian.md)), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md).
+- Примеры: [несколько агентов в одном проекте](examples/single-project-agents.ru.md), [межпроектный контракт](examples/contract-zone.ru.md), [доска задач для агентов](examples/board-agents.ru.md).
+- Шаблоны: [`.doc-hub.yaml`](templates/doc-hub.ru.yaml), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), памятка Obsidian ([ru](templates/hub-obsidian.ru.md), [en](templates/hub-obsidian.md)), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md), [карточка](templates/card.ru.md).
 
 ## Языки
 

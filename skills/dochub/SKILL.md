@@ -16,7 +16,7 @@ Nothing will check you automatically: follow the rules exactly. If unsure, ask a
 3. **Update the hub** if it has an origin: `git -C <hub> pull --rebase`.
 4. **Project:** the first in `projects` of the hub section, then the first in `access`, otherwise the only project where you are a member. From here on, `<id>` is this project.
 5. **Permissions:** in `<hub>/.doc-hub/config.yaml`, `projects.<id>.members.<name>`: `role` and `paths`. If there is no exact entry, take the longest entry `X` for which your name starts with `X-`: its role, `paths` and area ownership apply to you too. If there is no such entry, you have no access. A `reader` writes only its own view mark. If `paths` is set, read and write only there.
-6. **Features:** in the same place, `projects.<id>.features.<key>.enabled`: `discussions`, `changes`, `claims`. If a feature is off, do not write its files.
+6. **Features:** in the same place, `projects.<id>.features.<key>.enabled`: `discussions`, `changes`, `claims`, `board`. If a feature is off, do not write its files.
 
 Time is always UTC: `date -u +%Y-%m-%dT%H:%M:%SZ`.
 
@@ -27,6 +27,7 @@ In `<hub>/projects/<id>/`:
 1. **Inbox:** in `discussions/*.md` with `status: open`, where the last message is not yours and one of these holds: you are in `to`; you are the author; the kind is not `note` and you own the area of a document from `refs`. An area owner also needs `accepted`.
 2. **Wiki changes:** `git -C <hub> log <commit from the mark>..HEAD -- projects/<id>/wiki`. The mark is `changes/<name>.yaml`.
 3. **Claims:** `claims/*.md` whose `expires` has not passed yet.
+4. **Your cards:** `board/*.md` where `assignee` is your name and `status` is `todo` or `doing`.
 
 ## Documentation
 
@@ -92,12 +93,44 @@ Do not change earlier messages. Put a line of the form `[time agent]` into text 
 
 For noticeable work in parallel with other agents: first check others' active claims on the same paths, then create `claims/<name>-<slug>.md` by `schemas/claim.md`. When done, delete the file. Do not touch someone else's active claim.
 
+## Board
+
+File `projects/<id>/board/<slug>.md`, schema: `schemas/card.md`, rules: `specifications/features/board.md`.
+
+**Create.** `uid` is a ULID, as for a discussion:
+
+```markdown
+---
+uid: <ULID>
+type: card
+project: <id>
+title: <what to do>
+author: <name>
+assignee:
+status: todo
+priority: normal
+due:
+refs: []
+discussion:
+outcome:
+created: <time>
+---
+
+<description>
+
+## History
+
+[<time> <name> → todo]
+```
+
+**Change status.** Change `status` in the frontmatter and append a blank line and the mark `[<time> <name> → <status>]` to the end of the file. Transitions: `backlog → todo → doing → done`, `doing → todo`, any status except `done` → `closed`. Taking a card means putting yourself in `assignee` and setting `doing`; do not take a card that has another assignee. Returning to `todo` clears `assignee`. The assignee sets `done`; the author or a project owner sets `closed`; both need `outcome`. Do not change earlier marks.
+
 ## Writing to the hub
 
 1. Add only your own files: `git -C <hub> add <files>`.
 2. `git -C <hub> -c user.name=<name> commit -m "<name>: <action> <object>"`: the commit author is the agent name. Example message: `ramir-claude-backend: discussion reply 2026-11-06-error-format`.
 3. If there is an origin: `git -C <hub> push`. On rejection: `git -C <hub> pull --rebase` and retry.
-4. On a `rebase` conflict: run `git rebase --abort`, save your text outside the hub, undo your commit (`git reset --keep HEAD~1`) and update the hub. In a discussion, append the message again; if you are changing the status, check again that the transition is valid. In the wiki, reread the document and make the edit on top of the new version.
+4. On a `rebase` conflict: run `git rebase --abort`, save your text outside the hub, undo your commit (`git reset --keep HEAD~1`) and update the hub. In a discussion, append the message again; if you are changing the status, check again that the transition is valid. Reread a card and repeat the edit, checking the transition. In the wiki, reread the document and make the edit on top of the new version.
 
 ## Session end
 

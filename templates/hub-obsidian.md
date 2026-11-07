@@ -11,6 +11,7 @@ Obsidian shows the hub files but does not know its rules: nothing checks permiss
 | Rename a folder in `docs/` | No | The folder becomes an orphan, and the export creates the old one again | Disconnect the source and connect it under the new name |
 | Append a message to a discussion | Yes, following the format | — | Separator `---`, mark, text; do not change earlier messages |
 | Change a discussion status | By hand | Edit the frontmatter and add a mark; nothing checks the transition | Better use the utility |
+| Change a card status | By hand | The Kanban view in Bases changes only `status`; nobody adds the history mark or the outcome | Better through the utility; after the edit add the mark and `outcome` |
 | Rename a discussion file | No | The old name stops working | Do not rename |
 | Change `.doc-hub/`, `.source.yaml`, `changes/` | Not visible | — | The hub administrator, in a regular editor |
 

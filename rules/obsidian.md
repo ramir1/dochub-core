@@ -9,7 +9,7 @@ updated: 2026-11-07
 
 # Working through Obsidian
 
-Obsidian is the hub's interface for people: the hub opens as a vault, one for all projects. It shows and lets you edit the wiki, and shows discussions, claims and external documentation.
+Obsidian is the hub's interface for people: the hub opens as a vault, one for all projects. It shows and lets you edit the wiki, and shows discussions, claims, board cards and external documentation.
 
 ## What you can do in Obsidian
 
@@ -78,6 +78,20 @@ Own documentation is in `projects/<id>/wiki/`. Edit right in Obsidian, and the G
 
 `projects/<id>/claims/` shows who is working on what. A person can also set a claim from the `templates/claim.md` template. In the template `created` and `expires` are the same: convert the time to UTC and set the duration in `expires`, otherwise the claim expires immediately.
 
+## Board
+
+`projects/<id>/board/` holds task cards. A card can be created from the `templates/card.md` template, then the plugin's "generate UID" command. Replace the time with UTC.
+
+The built-in [Kanban view in Bases](https://obsidian.md/help/bases/views/kanban) (Obsidian 1.14 and later) shows cards as columns: the `projects/<id>/board` folder, grouped by the `status` property. Dragging writes the new `status` value to the note. This comes from the documentation; the view has not been tried in practice.
+
+Limitations:
+
+- **Rules are not checked.** Dragging changes only `status`: a person adds the history line, `assignee` and `outcome` by hand, and Obsidian does not check transitions or permissions. The data check finds such edits.
+- **New columns.** According to the description of the Kanban to Bases plugin, the view shows only the columns listed in the base. The status list is fixed, so listing them once is enough.
+- **Unknown:** how a `.base` file behaves in the hub's git when edited from different machines.
+
+The [obsidian-kanban](https://github.com/mgmeyers/obsidian-kanban) plugin does not fit: it keeps the whole board in one file, while a hub card is a separate file.
+
 ## Templates
 
-Copy from Core to the hub's `templates/`: [discussion](../templates/discussion.md), [claim](../templates/claim.md). The Russian versions lie next to them: [discussion](../templates/discussion.ru.md), [claim](../templates/claim.ru.md).
+Copy from Core to the hub's `templates/`: [discussion](../templates/discussion.md), [claim](../templates/claim.md), [card](../templates/card.md). The Russian versions lie next to them: [discussion](../templates/discussion.ru.md), [claim](../templates/claim.ru.md), [card](../templates/card.ru.md).

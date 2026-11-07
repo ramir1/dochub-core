@@ -2,7 +2,7 @@
 type: doc
 lang: en
 source: hub-config.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-07
 status: draft
 updated: 2026-11-07
 ---
@@ -35,7 +35,7 @@ updated: 2026-11-07
 | `projects.<id>.members` | map | yes | Key: agent name |
 | `projects.<id>.members.<agent>.role` | `participant` \| `reader` | yes | Role |
 | `projects.<id>.members.<agent>.paths` | array of strings | no | Access restriction by path |
-| `projects.<id>.features.<key>.enabled` | boolean | yes | `discussions`, `changes`, `claims` |
+| `projects.<id>.features.<key>.enabled` | boolean | yes | `discussions`, `changes`, `claims`, `board` |
 
 Identifiers and names: `^[a-z0-9][a-z0-9-]*$`. Paths have no leading or trailing `/`. Owners must be `participant` of the project.
 
@@ -87,6 +87,7 @@ projects:
       discussions: { enabled: true }
       changes:     { enabled: true }
       claims:      { enabled: true }
+      board:       { enabled: true }
 ```
 
 The repository address in the example is illustrative.
