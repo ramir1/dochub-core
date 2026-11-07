@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Хранилище хаба
@@ -14,8 +14,8 @@ updated: 2026-11-06
 ```
 <hub>/
 ├── README.md                    # описание хаба для людей
-├── AGENTS.md                    # вход для ИИ-агентов (шаблон — templates/hub-AGENTS.ru.md)
-├── OBSIDIAN.ru.md, OBSIDIAN.en.md # памятка для работы в Obsidian (шаблоны — templates/hub-obsidian.*.md)
+├── AGENTS.md, AGENTS.ru.md      # вход для ИИ-агентов и его русская версия (шаблоны — templates/hub-AGENTS*.md)
+├── OBSIDIAN.md, OBSIDIAN.ru.md  # памятка для работы в Obsidian (шаблоны — templates/hub-obsidian*.md)
 ├── .gitignore                   # .doc-hub/config.local.yaml, .obsidian/workspace.json, projects/*/docs/ (шаблон — templates/hub-gitignore)
 ├── .doc-hub/
 │   ├── config.yaml              # проекты, зоны, агенты, роли, функции (в git)

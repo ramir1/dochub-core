@@ -1,6 +1,6 @@
-# DocHub: локальные файлы, не попадают в git хаба
+# DocHub: local files, do not reach the hub's git
 .doc-hub/config.local.yaml
-# Состояние окна Obsidian зависит от машины
+# Obsidian window state depends on the machine
 .obsidian/workspace.json
-# Внешняя документация — источники для чтения, на каждой машине своя выгрузка
+# External documentation: sources for reading, each machine has its own export
 projects/*/docs/

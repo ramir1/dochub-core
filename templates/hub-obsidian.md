@@ -1,6 +1,6 @@
 # Working with the hub in Obsidian
 
-Obsidian shows the hub files but does not know its rules: nothing checks permissions, areas or links, and some files are hidden. Copied to the hub root as `OBSIDIAN.en.md`.
+Obsidian shows the hub files but does not know its rules: nothing checks permissions, areas or links, and some files are hidden. Copied to the hub root as `OBSIDIAN.md`.
 
 | Action | Allowed in Obsidian | What happens | The right way |
 |---|---|---|---|

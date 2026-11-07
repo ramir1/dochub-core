@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Подключение к DocHub
@@ -33,7 +33,7 @@ updated: 2026-11-06
 Один хаб обычно обслуживает все проекты. Создаёт его администратор хаба; на уровне 2 эти шаги обычно выполняет реализация:
 
 1. Создать git-репозиторий. Для нескольких машин нужен общий origin, для одной он не обязателен, см. [hub-storage](../specifications/hub-storage.ru.md#синхронизация-между-машинами).
-2. Скопировать шаблоны: [hub-gitignore](../templates/hub-gitignore) → `.gitignore`, [hub-AGENTS](../templates/hub-AGENTS.ru.md) → `AGENTS.md`, [hub-obsidian](../templates/hub-obsidian.ru.md) → `OBSIDIAN.ru.md` и его [английскую версию](../templates/hub-obsidian.en.md) → `OBSIDIAN.en.md`. Добавить `README.md` с описанием хаба.
+2. Скопировать шаблоны: [hub-gitignore](../templates/hub-gitignore) → `.gitignore`, [hub-AGENTS](../templates/hub-AGENTS.md) → `AGENTS.md` и его [русскую версию](../templates/hub-AGENTS.ru.md) → `AGENTS.ru.md`, [hub-obsidian](../templates/hub-obsidian.md) → `OBSIDIAN.md` и его [русскую версию](../templates/hub-obsidian.ru.md) → `OBSIDIAN.ru.md`. Добавить `README.md` с описанием хаба.
 3. Создать `.doc-hub/config.yaml` с `format_version`, `hub`, `agents` и `projects`, см. [hub-config](../schemas/hub-config.ru.md).
 4. Закоммитить и отправить в origin.
 
@@ -65,7 +65,7 @@ updated: 2026-11-06
 
 На уровне 2 шаги 1, 2 и 5 обычно выполняет реализация.
 
-1. **Манифест.** Положить в корень `.doc-hub.yaml` из шаблона [doc-hub.yaml](../templates/doc-hub.yaml) и добавить его в `.gitignore` репозитория: файл свой на каждой машине, см. [project-manifest](../specifications/project-manifest.ru.md).
+1. **Манифест.** Положить в корень `.doc-hub.yaml` из шаблона [doc-hub.yaml](../templates/doc-hub.yaml) (комментарии на русском — [doc-hub.ru.yaml](../templates/doc-hub.ru.yaml)) и добавить его в `.gitignore` репозитория: файл свой на каждой машине, см. [project-manifest](../specifications/project-manifest.ru.md).
 2. **Инструкция.** Добавить в `CLAUDE.md` или `AGENTS.md` текст из шаблона [project-agents-snippet](../templates/project-agents-snippet.ru.md). Без него агент не узнает о хабе.
 3. **Имя агента.** Указать `agent` в разделе хаба манифеста. Другому агенту в этом репозитории задать `DOC_HUB_AGENT_SUFFIX` в окружении инструмента или сессии: регистрировать его в хабе не нужно, см. [access](../specifications/access.ru.md#суффикс).
 4. **Несколько хабов.** Добавить в манифест раздел на каждый хаб; первый раздел используется по умолчанию, см. [project-manifest](../specifications/project-manifest.ru.md#несколько-хабов).

@@ -1,8 +1,8 @@
-# Манифест DocHub: свой на этой машине, в git не попадает.
-# Первый раздел в hubs — хаб по умолчанию, другой выбирается через --hub <id> или DOC_HUB_ID.
+# DocHub manifest: separate on this machine, does not reach git.
+# The first section in hubs is the default hub; choose another with --hub <id> or DOC_HUB_ID.
 hubs:
-  main:                       # hub.id из конфигурации хаба
-    path: ~/projects/hub      # клон хаба на этой машине
-    projects: [<project-id>]  # проекты хаба, которые и есть этот репозиторий
-    agent: <agent-name>       # имя по умолчанию; другому агенту — DOC_HUB_AGENT_SUFFIX
-    access: []                # другие проекты хаба, с которыми работают агенты
+  main:                       # hub.id from the hub configuration
+    path: ~/projects/hub      # hub clone on this machine
+    projects: [<project-id>]  # hub projects that this repository is
+    agent: <agent-name>       # default name; for another agent use DOC_HUB_AGENT_SUFFIX
+    access: []                # other hub projects that agents work with

@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # DocHub Core
@@ -87,8 +87,8 @@ updated: 2026-11-06
 ### examples/ и templates/
 
 - Примеры: [несколько агентов в одном проекте](examples/single-project-agents.ru.md), [межпроектный контракт](examples/contract-zone.ru.md).
-- Шаблоны: [`.doc-hub.yaml`](templates/doc-hub.yaml), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), памятка Obsidian ([ru](templates/hub-obsidian.ru.md), [en](templates/hub-obsidian.en.md)), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md).
+- Шаблоны: [`.doc-hub.yaml`](templates/doc-hub.ru.yaml), [AGENTS.md хаба](templates/hub-AGENTS.ru.md), памятка Obsidian ([ru](templates/hub-obsidian.ru.md), [en](templates/hub-obsidian.md)), [.gitignore хаба](templates/hub-gitignore), [инструкция для проекта](templates/project-agents-snippet.ru.md), [обсуждение](templates/discussion.ru.md), [отметка работы](templates/claim.ru.md).
 
 ## Языки
 
-Документы пишутся сначала на русском (`*.ru.md`), затем переводятся на английский (`*.en.md`). См. [translation](rules/translation.ru.md).
+Документы пишутся сначала на русском (`*.ru.md`), затем переводятся на английский (файл рядом, без суффикса: `*.md`). См. [translation](rules/translation.ru.md).

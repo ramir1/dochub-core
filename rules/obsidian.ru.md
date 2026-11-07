@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # Работа через Obsidian
@@ -11,7 +11,7 @@ Obsidian — интерфейс хаба для людей: хаб открыв�
 
 ## Что можно делать в Obsidian
 
-Obsidian не знает правил хаба: права, зоны и связи никто не проверяет, а `.doc-hub/`, `.source.yaml` и `changes/` в нём не видны. Та же памятка лежит в корне хаба на двух языках: `OBSIDIAN.ru.md` и `OBSIDIAN.en.md`.
+Obsidian не знает правил хаба: права, зоны и связи никто не проверяет, а `.doc-hub/`, `.source.yaml` и `changes/` в нём не видны. Та же памятка лежит в корне хаба на двух языках: `OBSIDIAN.md` и `OBSIDIAN.ru.md`.
 
 | Действие | Можно в Obsidian | Что будет | Как правильно |
 |---|---|---|---|
@@ -78,4 +78,4 @@ Obsidian не знает правил хаба: права, зоны и связ
 
 ## Шаблоны
 
-Скопировать из Core в `templates/` хаба, убрав суффикс языка: [discussion](../templates/discussion.ru.md) → `discussion.md`, [claim](../templates/claim.ru.md) → `claim.md`.
+Скопировать из Core в `templates/` хаба: [discussion](../templates/discussion.md), [claim](../templates/claim.md). Русские версии лежат рядом: [discussion](../templates/discussion.ru.md), [claim](../templates/claim.ru.md).
