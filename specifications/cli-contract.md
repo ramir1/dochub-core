@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: cli-contract.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Interface of the reference implementation `doc-hub`
@@ -85,6 +85,8 @@ An agent runs in its own project's repository, not in the hub.
 | `doc-hub inbox`: discussions that need a reaction, see [inbox](features/discussions.md#inbox) | everyone |
 
 `<discussion>` is a file name without the extension (`2026-11-06-error-format`) or a `uid`. `--message -` reads text from stdin.
+
+`doc-hub` does not check the queue, the round limit and rollback yet: at level 2 they rest on the rules.
 
 `discussion show` warns if a document has changed after the commit from `refs`. `discussion create` warns if a commit from `refs` is not pushed to origin.
 

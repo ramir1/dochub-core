@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: overview.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # DocHub overview
@@ -51,5 +51,6 @@ These agents have nothing in common except files:
 2. **Shared knowledge outside projects.** Proposal: keep it as a separate project with a wiki.
 3. **Search across discussions** (shared memory) without an indexer: plain text search only.
 4. **Third-party features.** How to connect features outside the protocol: not decided.
+5. **Links and the area of a discussion.** Proposal: drop `refs`, put links to documents into message text and set the discussion area with an `area` field. Postponed.
 
 Authentication, a private part of the wiki and delivery of docs to agents without repository access are questions for level 3 implementations, see [levels](levels.md#level-3-service).

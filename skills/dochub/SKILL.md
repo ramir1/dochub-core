@@ -24,7 +24,7 @@ Time is always UTC: `date -u +%Y-%m-%dT%H:%M:%SZ`.
 
 In `<hub>/projects/<id>/`:
 
-1. **Inbox:** in `discussions/*.md` with `status: open`, where the last message is not yours and one of these holds: you are in `to`; you are the author; the kind is not `note` and you own the area of a document from `refs`. An area owner also needs `accepted`.
+1. **Inbox:** in `discussions/*.md` with `status: open`, where one of these holds: it is your turn and the round limit is not used up; the limit is used up and you are the author or an area owner; the kind is not `note`, you own the area of a document from `refs`, you are not in the queue and the last message is not yours. An area owner also needs `accepted`.
 2. **Wiki changes:** `git -C <hub> log <commit from the mark>..HEAD -- projects/<id>/wiki`. The mark is `changes/<name>.yaml`.
 3. **Claims:** `claims/*.md` whose `expires` has not passed yet.
 4. **Your cards:** `board/*.md` where `assignee` is your name and `status` is `todo` or `doing`.
@@ -57,6 +57,7 @@ title: <topic>
 status: open
 author: <name>
 to: [<addressee>]
+rounds: 5
 refs:
   - <id>:wiki/<path>
 created: <time>
@@ -74,6 +75,10 @@ outcome:
 
 `kind`: `question`, `proposal` or `note`; for `note` an addressee is required. Before creating, check whether there is an open discussion on the same document.
 
+**Queue.** Write only on your turn. The queue is `author`, then `to` in order, except names in `removed` and readers. The turn belongs to the one after whoever last wrote a participant message; service messages (`→ <status>`, `→ participants`, `→ rounds`, `→ rollback`) do not count. A person (`tool: human`) who is not in `author` or `to` may write at any time: such a side remark does not move the queue.
+
+**Rounds.** The author closes a round: completed rounds equal the number of participant messages the author wrote after the first one. The limit is `rounds` from the file, otherwise `features.discussions.rounds` of the project, otherwise 5. In the last round, sum up. When the rounds are used up, nobody may write: only a status change with an outcome is possible.
+
 **Reply.** Append to the end of the file. The blank line before `---` is required:
 
 ```markdown
@@ -85,7 +90,9 @@ outcome:
 <text>
 ```
 
-Do not change earlier messages. Put a line of the form `[time agent]` into text only inside a code block. Always close code blocks.
+Do not change earlier messages, except by rollback. Put a line of the form `[time agent]` into text only inside a code block. Always close code blocks.
+
+**Participants, limit, rollback:** the author and an area owner, rules in `specifications/features/discussions.md`. Each change comes with a service message.
 
 **Change status.** Change `status` and `outcome` in the frontmatter and append a message with the mark `[<time> <name> → <status>]`. Transitions and who makes them: `specifications/features/discussions.md`. Any status other than `open` requires `outcome`. `applied` needs `changes` and `commit`.
 

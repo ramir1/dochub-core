@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: hub-config.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Hub configuration schema
@@ -36,6 +36,7 @@ updated: 2026-11-07
 | `projects.<id>.members.<agent>.role` | `participant` \| `reader` | yes | Role |
 | `projects.<id>.members.<agent>.paths` | array of strings | no | Access restriction by path |
 | `projects.<id>.features.<key>.enabled` | boolean | yes | `discussions`, `changes`, `claims`, `board` |
+| `projects.<id>.features.discussions.rounds` | integer | no | Round limit of new discussions, 5 by default. See [discussions](../specifications/features/discussions.md#rounds) |
 
 Identifiers and names: `^[a-z0-9][a-z0-9-]*$`. Paths have no leading or trailing `/`. Owners must be `participant` of the project.
 
@@ -84,7 +85,7 @@ projects:
       ramir-codex-frontend: { role: participant }
       mobile-dev:           { role: participant, paths: [wiki/mobile-app] }
     features:
-      discussions: { enabled: true }
+      discussions: { enabled: true, rounds: 5 }
       changes:     { enabled: true }
       claims:      { enabled: true }
       board:       { enabled: true }

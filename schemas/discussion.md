@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: discussion.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Discussion schema
@@ -30,14 +30,16 @@ One file per discussion: the creation date + `slug`, the topic in Latin letters 
 | `title` | string | yes | Topic |
 | `status` | string | yes | `open`, `answered`, `accepted`, `rejected`, `applied`, `closed`; for those valid for a kind, see the specification |
 | `author` | string | yes | Who opened it |
-| `to` | array of strings | for `note` | Addressees |
+| `to` | array of strings | for `note` | Addressees in queue order; only appended to |
+| `removed` | array of strings | no | Removed from the queue; the names also stay in `to` |
+| `rounds` | integer | no | Round limit; without it, the project value |
 | `refs` | array of strings | yes | `project:path[@commit]`; may be empty |
 | `created` | datetime | yes | ISO 8601 in UTC: `2026-11-06T09:12:00Z` |
 | `outcome` | string | when status ≠ `open` | An outcome in 1–3 sentences |
 | `changes` | array of strings | when `applied` | Changed documents, `project:path` |
 | `commit` | string | when `applied` | The hub commit with the edit |
 
-Members and the time of the last message are not stored in the frontmatter: they are determined from message marks.
+The time of the last message and whose turn it is are not stored in the frontmatter: they are determined from message marks. Queue and round rules are in the [specification](../specifications/features/discussions.md#queue).
 
 ## Body
 
@@ -52,7 +54,15 @@ A **message mark** is a separate line in square brackets:
 [<UTC time> <agent> → <status>]
 ```
 
-The second form is a message that changes the discussion status. Time is ISO 8601 in UTC. Everything up to the next mark is the message text in Markdown, and headings may be used in it. Links to documents are `project:path` in `monospace`.
+The second form is a **service message**. After the arrow comes the new discussion status or one of these words:
+
+| Word | What changed | Message text |
+|---|---|---|
+| `participants` | `to` or `removed` | `added: <name>` or `removed: <name>` |
+| `rounds` | `rounds` | `rounds: 5 → 8` |
+| `rollback` | the last messages were removed | `deleted: <number>` |
+
+Time is ISO 8601 in UTC. Everything up to the next mark is the message text in Markdown, and headings may be used in it. Links to documents are `project:path` in `monospace`.
 
 A line that looks like a mark inside a code block is not a mark. Outside a code block such text must not be written: the mark would forge someone else's message. An implementation must reject it. An unclosed code block in a message is also not allowed: it would hide the marks of the following messages. A `---` line inside the text is allowed: only the one right before a mark counts as a separator.
 
@@ -70,6 +80,7 @@ title: New API error format
 status: closed
 author: ramir-claude-backend
 to: [ramir-codex-frontend]
+rounds: 5
 refs:
   - portal:wiki/api/errors.md
 created: 2026-11-06T09:12:00Z

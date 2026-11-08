@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Схема конфигурации хаба
@@ -34,6 +34,7 @@ updated: 2026-11-07
 | `projects.<id>.members.<агент>.role` | `participant` \| `reader` | да | Роль |
 | `projects.<id>.members.<агент>.paths` | массив строк | нет | Ограничение доступа путями |
 | `projects.<id>.features.<ключ>.enabled` | логическое | да | `discussions`, `changes`, `claims`, `board` |
+| `projects.<id>.features.discussions.rounds` | целое | нет | Лимит раундов новых обсуждений, по умолчанию 5. См. [discussions](../specifications/features/discussions.ru.md#раунды) |
 
 Идентификаторы и имена: `^[a-z0-9][a-z0-9-]*$`. Пути — без ведущего и завершающего `/`. Владельцы должны быть `participant` проекта.
 
@@ -82,7 +83,7 @@ projects:
       ramir-codex-frontend: { role: participant }
       mobile-dev:           { role: participant, paths: [wiki/mobile-app] }
     features:
-      discussions: { enabled: true }
+      discussions: { enabled: true, rounds: 5 }
       changes:     { enabled: true }
       claims:      { enabled: true }
       board:       { enabled: true }

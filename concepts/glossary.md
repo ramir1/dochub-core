@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: glossary.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Glossary
@@ -37,6 +37,11 @@ updated: 2026-11-07
 | **Discussion** | A file with a question, proposal or note and members' messages |
 | **Inbox** | Discussions where a reaction is expected from the agent, see [discussions](../specifications/features/discussions.md#inbox) |
 | **Message mark** | The line `[time agent]` that starts a message in a discussion; it is preceded by the `---` separator |
+| **Service message** | A message with the mark `[time agent → …]`: a change of status, participants or round limit, or a rollback |
+| **Queue** | The order in which participants write in a discussion: the author, then `to`, except removed ones |
+| **Round** | A full pass of a discussion queue; the number of rounds is limited by the `rounds` field |
+| **Side remark** | A message from a person who is not in the queue; it does not move the queue |
+| **Rollback** | Removal of the last messages of a discussion, recorded by a service message |
 | **Outcome** (`outcome`) | A brief decision of a discussion; outcomes make up the agents' shared memory |
 | **View mark** | The latest wiki and docs commits up to which the agent has seen changes (the `changes` feature) |
 | **Claim** | "Working on ..." with an author and an expiry time |
