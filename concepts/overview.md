@@ -27,13 +27,13 @@ These agents have nothing in common except files:
 
 ## Principles
 
-- **Two kinds of documentation.** The wiki lives in the hub: a person edits it in Obsidian, an agent through an implementation or by the skill. Docs live where they are, in a project folder or repository; the hub exports them for reading and does not store them in git. What goes where: [wiki](../specifications/wiki.md#what-goes-in-the-wiki).
+- **Two kinds of documentation.** The wiki lives in the hub: a person edits it in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](levels.md)), an agent through an implementation or by the skill. Docs live where they are, in a project folder or repository; the hub exports them for reading and does not store them in git. What goes where: [wiki](../specifications/wiki.md#what-goes-in-the-wiki).
 - **Requirements apply only to the wiki.** The hub sets requirements for its own documentation, not for external documentation. DocHub does not require a way to manage tasks: the board is an optional feature.
 - **Only what is needed.** Features are connected to a project by choice.
 - **Markdown + Git.** Hub data are Markdown files with frontmatter and service YAML files in the hub's git repository. They can be read without DocHub, and the Markdown also in Obsidian.
 - **Writes without manual conflicts.** Agent marks are laid out so that only the author changes a file. A write to a discussion is retried on top of the fresh version after a collision. The wiki has ordinary git conflicts, see [wiki](../specifications/wiki.md#concurrent-edits).
 - **Protocol and implementations.** DocHub is a concept and a file protocol; utilities and Web are add-ons that can be rewritten. See [levels](levels.md).
-- **Writing depends on the level.** Without a utility an agent writes files itself by the [skill](../skills/dochub/SKILL.md); with a utility, only through it. People read and write in Obsidian.
+- **Writing depends on the level.** Without a utility an agent writes files itself by the [skill](../skills/dochub/SKILL.md); with a utility, only through it. At levels 1 and 2 people read and write in Obsidian, at level 3 through the service.
 - **Identity belongs to the agent, permissions to the hub.** An agent's name is set on the machine, in the local manifest or the environment, not in the repository's git; permissions come from the hub configuration.
 - **Honesty.** The unknown is marked as unknown, see [writing](../rules/writing.md).
 

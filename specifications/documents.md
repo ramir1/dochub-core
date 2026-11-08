@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: documents.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Documents
@@ -34,7 +34,7 @@ The commit comes from the hub for the wiki and from the source repository for do
 ## uid
 
 - The hub does **not add** `uid` or other fields to documentation.
-- In hub data, discussions have a `uid` (ULID). It is set by the creator: an implementation, an agent or a person with an Obsidian plugin command. More: [discussion](../schemas/discussion.md).
+- In hub data, discussions have a `uid` (ULID). It is set by the creator: an implementation, an agent or a person with an Obsidian plugin command (levels 1–2). More: [discussion](../schemas/discussion.md).
 - A `uid` is not changed or copied.
 
 ## Links

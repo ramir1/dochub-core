@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: wiki.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Project wiki
@@ -21,7 +21,7 @@ The virtual path matches the project folder: `wiki/mobile-app/09-comments.md` li
 
 ## Who edits
 
-- **A person**: directly in Obsidian, since the hub is the storage. Synchronization is done by the Git plugin.
+- **A person**: directly in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](../concepts/levels.md)), since the hub is the storage. Synchronization is done by the Git plugin.
 - **An AI agent**: through an implementation, and at level 1 directly by the skill.
 - Only the document's **area owner** can write, and outside areas the project owner. Others suggest an edit through a `proposal`.
 

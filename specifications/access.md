@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: access.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Access: agents, roles, areas
@@ -81,7 +81,7 @@ Owners of an area (`areas.<path>.owners`) or project (`owners`) are agents who d
 
 ## Write policy
 
-1. **The wiki** is written only by the area owner, and outside areas by the project owner: an agent through an implementation or by the skill, a person in Obsidian. **Docs** are not written through the hub; they are edited in their repository.
+1. **The wiki** is written only by the area owner, and outside areas by the project owner: an agent through an implementation or by the skill, a person in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](../concepts/levels.md)). **Docs** are not written through the hub; they are edited in their repository.
 2. **Feature data:** within the role's permissions, by file see [hub-storage](hub-storage.md#who-changes-which-file).
 3. **Hub configuration:** the hub administrator (a person with write access to the hub repository). The model has no separate administrator role.
 

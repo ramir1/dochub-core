@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: architecture.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Architecture
@@ -51,7 +51,7 @@ Terms: [glossary](glossary.md).
 
 ## Flows
 
-- **The wiki** is edited in the hub: by a person in Obsidian, by an agent through an implementation or by the skill.
+- **The wiki** is edited in the hub: by a person in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](levels.md)), by an agent through an implementation or by the skill.
 - **Docs** are edited where they live; an explicit export copies them to the hub, and they do not reach the hub's git.
 - **Features:** an agent works in its own repository, writes files to the hub clone, commits and pushes to origin.
 - **Synchronization:** `git pull` before reading, `commit` and `push` after writing; collisions are covered in [hub-storage](../specifications/hub-storage.md#write-collisions).

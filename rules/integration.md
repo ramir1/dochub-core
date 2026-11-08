@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: integration.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Connecting to DocHub
@@ -75,7 +75,7 @@ At level 2 an implementation usually does steps 1, 2 and 5.
 
 ## 6. People and other machines
 
-- **People** work in Obsidian: for setup see [obsidian](obsidian.md).
+- **People** at levels 1 and 2 (without a utility or without the web interface) work in Obsidian: for setup see [obsidian](obsidian.md).
 - **A new machine:** clone the hub, create `.doc-hub/config.local.yaml` if needed, install the implementation at level 2, and create a separate manifest in each repository.
 - **A new agent:** with its own permissions, add it to `agents` and `members`; with the base agent's permissions, just set a suffix.
 

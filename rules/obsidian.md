@@ -2,14 +2,14 @@
 type: doc
 lang: en
 source: obsidian.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Working through Obsidian
 
-Obsidian is the hub's interface for people: the hub opens as a vault, one for all projects. It shows and lets you edit the wiki, and shows discussions, claims, board cards and external documentation.
+Obsidian is the hub's interface for people: the hub opens as a vault, one for all projects. It shows and lets you edit the wiki, and shows discussions, claims, board cards and external documentation. This applies at levels 1 and 2: without a utility or without the web interface, see [levels](../concepts/levels.md). At level 3 there are no hub files on the machine, and people work through the service.
 
 ## What you can do in Obsidian
 

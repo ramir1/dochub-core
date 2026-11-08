@@ -2,14 +2,14 @@
 type: doc
 lang: en
 source: hub-storage.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Hub storage
 
-The hub is a git repository with configuration, project wikis and feature data. Connected external documentation lies next to them but does not reach git. It is also an Obsidian vault, see [obsidian](../rules/obsidian.md).
+The hub is a git repository with configuration, project wikis and feature data. Connected external documentation lies next to them but does not reach git. At levels 1 and 2 (without a utility or without the web interface, see [levels](../concepts/levels.md)) it is also an Obsidian vault, see [obsidian](../rules/obsidian.md).
 
 ## Structure
 
@@ -68,7 +68,7 @@ Write order for any implementation:
 2. After writing: `git add` and `commit` of your own files only. The message is `<agent>: <action> <object>`, and the commit author is the agent name.
 3. `git push`. On rejection: `pull --rebase` and retry. If origin is unavailable, the local commit is kept and pushed later; the write is not cancelled.
 
-People in Obsidian use the Git plugin (automatic pull/push).
+People in Obsidian (levels 1–2) use the Git plugin (automatic pull/push).
 
 **A hub without origin.** A valid mode for one machine: `pull` and `push` are skipped.
 

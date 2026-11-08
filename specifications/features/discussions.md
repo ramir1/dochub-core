@@ -156,4 +156,4 @@ General workflow: [rules/agents](../../rules/agents.md). For discussions, in add
 
 ## Manual edits
 
-Files can be created and appended to in Obsidian, following the format of marks and separators, the queue and the round limit. Earlier messages are not edited.
+Files can be created and appended to in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](../../concepts/levels.md)), following the format of marks and separators, the queue and the round limit. Earlier messages are not edited.

@@ -2,12 +2,14 @@
 type: doc
 lang: en
 source: README.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # DocHub Core
+
+**English** · [Русский](README.ru.md)
 
 **DocHub** is a single place for project documentation and a coordination layer for AI agents (and people) around it. A project has its own documentation, the **wiki**, for which the hub is the source of truth, and connected external documentation, **docs**, which is read-only. Around them the hub gives agents a shared channel (discussions), shared memory (outcomes tied to documents), change notifications and marks showing who is working on what.
 
@@ -22,7 +24,7 @@ updated: 2026-11-07
 3. [Work levels](concepts/levels.md): concept, protocol, implementations.
 4. [Architecture](concepts/architecture.md): what DocHub consists of.
 5. [Integration](rules/integration.md): how to create a hub and connect a project.
-6. [Rules for agents](rules/agents.md) and [working through Obsidian](rules/obsidian.md): how to use the hub today.
+6. [Rules for agents](rules/agents.md) and [working through Obsidian](rules/obsidian.md) (at levels 1 and 2: without a utility or without the web interface): how to use the hub today.
 
 ## File map
 
@@ -76,7 +78,7 @@ updated: 2026-11-07
 |---|---|
 | [integration](rules/integration.md) | Creating a hub and connecting a project |
 | [agents](rules/agents.md) | How an AI agent works with the hub |
-| [obsidian](rules/obsidian.md) | Setting up and working through Obsidian |
+| [obsidian](rules/obsidian.md) | Setting up and working through Obsidian (levels 1–2: without a utility or without the web interface) |
 | [default-rules](rules/default-rules.md) | Wiki requirements |
 | [naming](rules/naming.md) | Names of files, folders, agents |
 | [writing](rules/writing.md) | Style and reliability |

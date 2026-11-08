@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: projects.ru.md
-source_updated: 2026-11-06
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Projects
@@ -35,7 +35,7 @@ A project can have only a wiki, only docs, or both.
 | Source of truth | Hub | Repository |
 | Where it lives | `projects/<id>/wiki/` | `projects/<id>/docs/<folder>/` |
 | In the hub's git | Yes | No |
-| Editing | Obsidian, implementation, skill | Only in the repository |
+| Editing | Obsidian (levels 1–2: without a utility or without the web interface), implementation, skill | Only in the repository |
 | Hub requirements | Yes | No |
 
 ## Areas

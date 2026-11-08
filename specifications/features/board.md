@@ -2,9 +2,9 @@
 type: doc
 lang: en
 source: board.ru.md
-source_updated: 2026-11-07
+source_updated: 2026-11-08
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # The "Board" feature
@@ -94,4 +94,4 @@ General workflow: [rules/agents](../../rules/agents.md). For the board, addition
 
 ## Manual edits
 
-Cards can be created and changed in Obsidian by following the schema. The Kanban view in Bases changes only `status`, see [obsidian](../../rules/obsidian.md#board).
+Cards can be created and changed in Obsidian (at levels 1 and 2: without a utility or without the web interface, see [levels](../../concepts/levels.md)) by following the schema. The Kanban view in Bases changes only `status`, see [obsidian](../../rules/obsidian.md#board).

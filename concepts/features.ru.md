@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Функции хаба
@@ -14,7 +14,7 @@ updated: 2026-11-07
 - У функции есть спецификация в [`specifications/features/`](../specifications/features/) и схема файлов в [`schemas/`](../schemas/).
 - Включается для проекта в конфигурации хаба: `projects.<id>.features.<ключ>`, см. [hub-config](../schemas/hub-config.ru.md).
 - Данные — в хабе: `projects/<id>/<ключ>/`. В репозиторий проекта функции ничего не пишут.
-- Работа — по уровню: через реализацию или по скилу; люди — в Obsidian.
+- Работа — по уровню: через реализацию или по скилу; люди — в Obsidian (на уровнях 1 и 2 — без утилиты или без веб-интерфейса, см. [уровни](levels.ru.md)).
 - Права — по ролям и владельцам зон, см. [access](../specifications/access.ru.md).
 
 ## Список

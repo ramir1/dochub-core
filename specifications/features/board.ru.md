@@ -2,7 +2,7 @@
 type: doc
 lang: ru
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 ---
 
 # Функция «Доска»
@@ -92,4 +92,4 @@ backlog ──► todo ──► doing ──► done
 
 ## Ручные правки
 
-Карточки можно создавать и менять в Obsidian, соблюдая схему. Вид Kanban в Bases меняет только `status`, см. [obsidian](../../rules/obsidian.ru.md#доска).
+Карточки можно создавать и менять в Obsidian (на уровнях 1 и 2 — без утилиты или без веб-интерфейса, см. [уровни](../../concepts/levels.ru.md)), соблюдая схему. Вид Kanban в Bases меняет только `status`, см. [obsidian](../../rules/obsidian.ru.md#доска).
